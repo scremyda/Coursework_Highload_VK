@@ -514,9 +514,52 @@ RPS: 190 * 18М * 0.05 * 0.2 / 86 400 = 396
 
 ## 5. Логическая схема БД.
 
-![Логическая схема БД](https://github.com/scremyda/Coursework_Highload_VK/assets/63557586/82de7015-fa62-4a21-9598-8d1d4d070345)
+![Логическая схема БД](https://github.com/scremyda/Coursework_Highload_VK/assets/63557586/ad896166-fc23-4a98-a9ca-e482a8fdc4f3)
 
+landlord:
 
+```postgresql
+    16 (uuid) + 74 (email) + 104 (avatar_path) + 19 (phone_number) + 60 (password) + 102 (first_name, middle_name, last_name) + 64 (sex) + 8 (date_of_birth) + 8 (registration_date) + 4 (rating) = 459 байт
+```
 
+renter:
 
+```postgresql
+    16 (uuid) + 74 (email) + 104 (avatar_path) + 19 (phone_number) + 60 (password) + 102 (first_name, middle_name, last_name) + 64 (sex) + 8 (date_of_birth) + 8 (registration_date) + 4 (rating) = 459 байт
+```
 
+book:
+
+```postgresql
+    16 (uuid) + 8 (date_from) + 8 (date_to) + 504 (description) + 16 (landlord) + 16 (renter) + 16 (accommodation) = 568 байт
+```
+
+accommodation:
+
+```postgresql
+    16 (uuid) + 16 (landlord) + 104 (title) + 504 (description) + 8 (views) + 44 (status) + 8 (created_at) + 4 (rating) + 8 (accommodation_category) = 712 байт
+```
+
+category:
+
+```postgresql
+    8 (id) + 54 (name) + 204 (description) = 266 байт
+```
+
+accommodation_type:
+
+```postgresql
+    16 (uuid) + 54 (name) + 204 (description) + 54 (status) + 8 (created_at) + 16 (accommodation) = 352 байт
+```
+
+image:
+
+```postgresql
+    16 (uuid) + 104 (path) + 16 (accommodation_type) = 136 байт
+```
+
+review:
+
+```postgresql
+    16 (uuid) + 104 (title) + 504 (description) + 8 (views) + 8 (created_at) + 4 (rating) + 16 (book) = 660 байт
+```
