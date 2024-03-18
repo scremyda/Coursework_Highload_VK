@@ -514,7 +514,9 @@ RPS: 190 * 18М * 0.05 * 0.2 / 86 400 = 396
 
 ## 5. Логическая схема БД.
 
-![Логическая схема БД](https://github.com/scremyda/Coursework_Highload_VK/assets/63557586/b718aad4-f25f-4a8b-a3da-4d46e20ebfaf)
+![Логическая схема БД](https://github.com/scremyda/Coursework_Highload_VK/assets/63557586/82de7015-fa62-4a21-9598-8d1d4d070345)
+
+
 
 
 
