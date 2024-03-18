@@ -536,36 +536,40 @@ book:
 
 ```postgresql
     16 (uuid) + 8 (date_from) + 8 (date_to) + 504 (description) + 16 (landlord) + 16 (renter) + 16 (accommodation) = 568 байт
-    568 байт * 100 * 30М (кол-во объявлений, 100 отзывов на объявление в среднем) + 568 байт * 3 * 500М (кол-во арендаторов, 3 отзыва на арендателя в среднем) = 1589 + 793.5 = 2382.4 Гб
-
+    568 байт * 4475М (кол-во бронирований) = 2367.3 Гб
 ```
 
 accommodation:
 
 ```postgresql
     16 (uuid) + 16 (landlord) + 104 (title) + 504 (description) + 8 (views) + 44 (status) + 8 (created_at) + 4 (rating) + 8 (accommodation_category) = 712 байт
+    712 байт * 30М (кол-во объявленй) = 19.9 Гб
 ```
 
 category:
 
 ```postgresql
     8 (id) + 54 (name) + 204 (description) = 266 байт
+    266 байт * 100 (кол-во категорий) = 207.9 Кбит
 ```
 
 accommodation_type:
 
 ```postgresql
     16 (uuid) + 54 (name) + 204 (description) + 54 (status) + 8 (created_at) + 16 (accommodation) = 352 байт
+    352 байт * 30М  * 3 (кол-во объявленй * в среднем по 3 типа услуг) = 29.5 Гб
 ```
 
 image:
 
 ```postgresql
     16 (uuid) + 104 (path) + 16 (accommodation_type) = 136 байт
+    136 байт * 30М  * 3 * 5 (кол-во объявленй * в среднем по 3 типа услуг * 5 картинок в среднем) = 57 Гб
 ```
 
 review:
 
 ```postgresql
     16 (uuid) + 104 (title) + 504 (description) + 8 (views) + 8 (created_at) + 4 (rating) + 16 (book) = 660 байт
+    660 байт * 4475М (кол-во бронирований) = 2750.7 Гб
 ```
