@@ -529,12 +529,15 @@ renter:
 
 ```postgresql
     16 (uuid) + 74 (email) + 104 (avatar_path) + 19 (phone_number) + 60 (password) + 102 (first_name, middle_name, last_name) + 64 (sex) + 8 (date_of_birth) + 8 (registration_date) + 4 (rating) = 459 байт
+    459 байт * 500М (кол-во арендадателей) = 213.74 Гб
 ```
 
 book:
 
 ```postgresql
     16 (uuid) + 8 (date_from) + 8 (date_to) + 504 (description) + 16 (landlord) + 16 (renter) + 16 (accommodation) = 568 байт
+    568 байт * 100 * 30М (кол-во объявлений, 100 отзывов на объявление в среднем) + 568 байт * 3 * 500М (кол-во арендаторов, 3 отзыва на арендателя в среднем) = 1589 + 793.5 = 2382.4 Гб
+
 ```
 
 accommodation:
