@@ -514,7 +514,8 @@ RPS: 190 * 18М * 0.05 * 0.2 / 86 400 = 396
 
 ## 5. Логическая схема БД.
 
-![Логическая схема БД](https://github.com/scremyda/Coursework_Highload_VK/assets/63557586/ad896166-fc23-4a98-a9ca-e482a8fdc4f3)
+![Логическая схема БД](https://github.com/scremyda/Coursework_Highload_VK/assets/63557586/9b9b0ccd-310a-4a2a-ae3d-f670bfc30ad8)
+
 
 ### Примерный размер данных:
 
@@ -556,8 +557,8 @@ category:
 accommodation_type:
 
 ```postgresql
-    16 (uuid) + 54 (name) + 204 (description) + 54 (status) + 8 (created_at) + 16 (accommodation) = 352 байт
-    352 байт * 30М  * 3 (кол-во объявленй * в среднем по 3 типа услуг) = 29.5 Гб
+    16 (uuid) + 54 (name) + 8 (price) + 204 (description) + 54 (status) + 8 (created_at) + 16 (accommodation) = 360 байт
+    360 байт * 30М  * 3 (кол-во объявленй * в среднем по 3 типа услуг) = 30.2 Гб
 ```
 
 image:
