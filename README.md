@@ -516,6 +516,8 @@ RPS: 190 * 18М * 0.05 * 0.2 / 86 400 = 396
 
 ![Логическая схема БД](https://github.com/scremyda/Coursework_Highload_VK/assets/63557586/ad896166-fc23-4a98-a9ca-e482a8fdc4f3)
 
+### Примерный размер данных:
+
 landlord:
 
 ```postgresql
