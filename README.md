@@ -520,32 +520,25 @@ RPS: 190 * 18М * 0.05 * 0.2 / 86 400 = 396
 
 ### Примерный размер данных:
 
-landlord:
+user:
 
 ```postgresql
-    16 (uuid) + 74 (email) + 104 (avatar_path) + 19 (phone_number) + 60 (password) + 102 (first_name, middle_name, last_name) + 64 (sex) + 8 (date_of_birth) + 8 (registration_date) + 4 (rating) = 459 байт
-    459 байт * 10М (кол-во арендадателей) = 4.27 Гб
+    16 (uuid) + 74 (email) + 104 (avatar_path) + 19 (phone_number) + 60 (password) + 102 (first_name, middle_name, last_name) + 44 (sex) + 8 (date_of_birth) + 8 (registration_date) + 24 (type) = 459 байт
+    459 байт * (10М (кол-во арендадателей) + 500М (кол-во арендаторов)) = 218.01 Гб
 ```
 
-renter:
+book_review:
 
 ```postgresql
-    16 (uuid) + 74 (email) + 104 (avatar_path) + 19 (phone_number) + 60 (password) + 102 (first_name, middle_name, last_name) + 64 (sex) + 8 (date_of_birth) + 8 (registration_date) + 4 (rating) = 459 байт
-    459 байт * 500М (кол-во арендадателей) = 213.74 Гб
-```
-
-book:
-
-```postgresql
-    16 (uuid) + 8 (date_from) + 8 (date_to) + 504 (description) + 16 (landlord) + 16 (renter) + 16 (accommodation) = 568 байт
-    568 байт * 4475М (кол-во бронирований) = 2367.3 Гб
+    16 (uuid) + 8 (date_from) + 8 (date_to) + 504 (book_description) + 16 (user) + 16 (accommodation) +  104 (review_title) + 504 (review_description) + 8 (review_created_at) + 16 (review_stats) = 1200 байт
+    1200 байт * 4475М (кол-во бронирований) = 5001.2 Гб
 ```
 
 accommodation:
 
 ```postgresql
-    16 (uuid) + 16 (landlord) + 104 (title) + 504 (description) + 8 (views) + 44 (status) + 8 (created_at) + 4 (rating) + 8 (accommodation_category) = 712 байт
-    712 байт * 30М (кол-во объявленй) = 19.9 Гб
+    16 (uuid) + 16 (user) + 104 (title) + 504 (description) + 24 (status) + 8 (created_at) + 8 (accommodation_category) + 16 (accommodation_stats) + 8 (price_min) = 704 байт
+    704 байт * 30М (кол-во объявленй) = 19.67
 ```
 
 category:
@@ -558,20 +551,20 @@ category:
 accommodation_type:
 
 ```postgresql
-    16 (uuid) + 54 (name) + 8 (price) + 204 (description) + 54 (status) + 8 (created_at) + 16 (accommodation) = 360 байт
-    360 байт * 30М  * 3 (кол-во объявленй * в среднем по 3 типа услуг) = 30.2 Гб
+    16 (uuid) + 54 (name) + 204 (description) + 54 (status) + 8 (created_at) + 8 (price) + 16 (accommodation) + 104 (path) = 464 байт
+    464 байт * 30М (кол-во объявленй)  * (4 (кол-во картинок) + 3 (в среднем по 3 типа услуг)) = 90.75 Гб
 ```
 
-image:
+accommodation_stats:
 
 ```postgresql
-    16 (uuid) + 104 (path) + 16 (accommodation_type) = 136 байт
-    136 байт * 30М  * 3 * 5 (кол-во объявленй * в среднем по 3 типа услуг * 5 картинок в среднем) = 57 Гб
+    16 (uuid) + 8 (views) + 4 (rating) = 28 байт
+    28 байт * 30М (кол-во объявленй) = 0.78 Гб
 ```
 
-review:
+review_stats:
 
 ```postgresql
-    16 (uuid) + 104 (title) + 504 (description) + 8 (views) + 8 (created_at) + 4 (rating) + 16 (book) = 660 байт
-    660 байт * 4475М (кол-во бронирований) = 2750.7 Гб
+    16 (uuid) + 8 (views) + 4 (rating) = 28 байт
+    28 байт * 4475М (кол-во бронирований) = 116.69 Гб
 ```
