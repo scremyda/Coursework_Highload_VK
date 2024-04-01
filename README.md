@@ -588,6 +588,12 @@ review_stats:
 
 Изображения будем хранить в Amazon S3, тк он надежен, доступен через интернет и масштабируются до сотен петабайт.
 
+### Индексы.
+
+`accomodation`: B-tree по created_at, status
+
+`accomodation_type`: B-tree по price, status
+
 ### Шардинг.
 
 В качестве ключа для шардинга используются id(PK) путем хэширования UUID и распределению по хэшу (Согласованное хэширование). Для таблиц user, accomodation, accomodation_type, book_review, review_stats, accommodation_stats.
