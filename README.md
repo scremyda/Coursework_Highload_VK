@@ -600,7 +600,7 @@ review_stats:
 
 ### Шардинг.
 
-В качестве ключа для шардинга используются id(PK) путем хэширования UUID и распределению по хэшу (Согласованное хэширование). Для таблиц user, accomodation, accomodation_type, book_review, review_stats, accommodation_stats.
+В качестве ключа для шардинга используются id(PK) путем хэширования UUID и распределению по хэшу (Согласованное хэширование). Для таблиц user, accomodation, accomodation_type, book_review, review_stats.
 ### Клиентские библиотеки / интеграции.
 
 Языком backend является **GO** и подходящие для него библиотеки:
