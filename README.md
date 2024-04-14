@@ -650,3 +650,5 @@ review_stats:
 ---
 
 ### 8. Схема проекта.
+
+![Booking](https://github.com/scremyda/Coursework_Highload_VK/assets/63557586/ea90356a-245f-4e35-a997-40f6ed73d95c)
