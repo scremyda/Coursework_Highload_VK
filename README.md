@@ -653,7 +653,15 @@ review_stats:
 
 ### 8. Схема проекта.
 
-![Booking](https://github.com/scremyda/Coursework_Highload_VK/assets/63557586/22bd4caf-d357-4a32-a2aa-b1da52e3263d)
+![Схема Booking](https://github.com/scremyda/Coursework_Highload_VK/assets/63557586/3fb4493a-4b2b-407d-a8b7-dacd90ad0b15)
+
+| Сервис            |          Используемая таблица/хранилице             | 
+|-------------------|:-----------------------------------------------------:|
+| User service      |                       Таблица `user` в PostgreSQL                         |
+| Auth service        |                       Сессии(`user_id`, `value`, `session_id`) в Redis                       |
+| Book/Review service             |                       Таблицы `book_review` и `review_stats` в PostgreSQL                        |
+| Accomodation service             |  Таблицы `accomodation`, `accomodation_stats`, `category` и `accomodation_type` в PostgreSQL                     |
+| Search service            | Из таблицы `accommodation`:   `title`,    `description`,   `price_min` <br> Из таблицы `accommodation_stats`: `rating`, `accommodation_type`, `name`, `description` <br> Из таблицы `category`: `name`, `description` |
 
 ### 9. Обеспечение надёжности.
 
