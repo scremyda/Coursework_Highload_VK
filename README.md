@@ -655,7 +655,7 @@ review_stats:
 
 ![Схема Booking](https://github.com/scremyda/Coursework_Highload_VK/assets/63557586/3fb4493a-4b2b-407d-a8b7-dacd90ad0b15)
 
-| Сервис            |          Используемая таблица/хранилице             | 
+| Сервис            |          Используемая таблица/хранилище             | 
 |-------------------|:-----------------------------------------------------:|
 | User service      |                       Таблица `user` в PostgreSQL                         |
 | Auth service        |                       Сессии(`user_id`, `value`, `session_id`) в Redis                       |
