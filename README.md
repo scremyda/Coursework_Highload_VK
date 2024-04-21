@@ -651,7 +651,17 @@ review_stats:
 
 ---
 
-### 8. Схема проекта.
+### 8. Обеспечение надёжности.
+
+| Обеспечение надежности             | Реализация |
+|-------------------------------|--------------------------------|
+| Observalvability              | Логи: Сбор логов с трассировкой, храним все в течении месяца, важные - более года. <br> <br> Мониторинг: real user monitoring (RUM), synthetic monitoring, external monitoring, alertmanager, дэшборды. <br> <br> Профилирование:  используем go/pprof. | 
+| Отказоустойчивая архитектура                       |  Резервирование: Ресурсов, физических компонентовб, репликация бд, независимые геораспределенные ДЦ. <br> <br> Cегментирование: Тяжелые сервисы на отдельные машины. <br> <br> Failover policy: Rate limiter клиентских запросов по IP, Retry только от frontend. <br> <br> Gracefull shutdown: Обработка висящих запросов при остановке сервиса. <br> <br> Graceful degradation: Остаемся user-friendly при негативных сценариях.  |
+
+
+---
+
+### 9. Схема проекта.
 
 ![Схема Booking](https://github.com/scremyda/Coursework_Highload_VK/assets/63557586/3fb4493a-4b2b-407d-a8b7-dacd90ad0b15)
 
@@ -662,9 +672,4 @@ review_stats:
 | Book/Review service             |                       Таблицы `book_review` и `review_stats` в PostgreSQL.                        |
 | Accomodation service             |  Таблицы `accomodation`, `accomodation_stats`, `category` и `accomodation_type` в PostgreSQL.                     |
 | Search service            | Из таблицы `category`: `name`, `description` в Elasticsearch. <br> Из таблицы `accommodation`: `title`, `description`, `price_min` в Elasticsearch. <br> Из таблицы `accommodation_stats`: `rating`, `accommodation_type`, `name`, `description` в Elasticsearch. |
-
----
-
-### 9. Обеспечение надёжности.
-
 
