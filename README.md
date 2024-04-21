@@ -661,7 +661,7 @@ review_stats:
 | Auth service        |                       Сессии(`user_id`, `value`, `session_id`) в Redis                       |
 | Book/Review service             |                       Таблицы `book_review` и `review_stats` в PostgreSQL                        |
 | Accomodation service             |  Таблицы `accomodation`, `accomodation_stats`, `category` и `accomodation_type` в PostgreSQL                     |
-| Search service            | Из таблицы `accommodation`:   `title`,    `description`,   `price_min` <br> Из таблицы `accommodation_stats`: `rating`, `accommodation_type`, `name`, `description` <br> Из таблицы `category`: `name`, `description` |
+| Search service            | Из таблицы `category`: `name`, `description` <br> Из таблицы `accommodation`:   `title`,    `description`,   `price_min` <br> Из таблицы `accommodation_stats`: `rating`, `accommodation_type`, `name`, `description` |
 
 ### 9. Обеспечение надёжности.
 
