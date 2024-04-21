@@ -573,6 +573,8 @@ review_stats:
 
 ## 6. Физическая схема БД.
 
+![Физическая схема БД](https://github.com/scremyda/Coursework_Highload_VK/assets/63557586/b551658b-72aa-47c7-8632-7c30f97003ec)
+
 ### Выбор СУБД.
 
 Для хранения сессий пользователей (user_id, value, session_id) будем использовать key-value хранилище Redis, тк:  
@@ -651,4 +653,8 @@ review_stats:
 
 ### 8. Схема проекта.
 
-![Booking](https://github.com/scremyda/Coursework_Highload_VK/assets/63557586/ea90356a-245f-4e35-a997-40f6ed73d95c)
+![Booking](https://github.com/scremyda/Coursework_Highload_VK/assets/63557586/22bd4caf-d357-4a32-a2aa-b1da52e3263d)
+
+### 9. Обеспечение надёжности.
+
+
