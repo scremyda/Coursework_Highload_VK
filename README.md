@@ -618,11 +618,11 @@ review_stats:
 
 ### Индексы.
 
-`accomodation`: B-tree по created_at, status
+`accomodation`: B-tree по user, accomodation_stats
 
-`accomodation_type`: B-tree по price, status
+`accomodation_type`: B-tree по accomodation
 
-`book_review`: B-tree по date_from, date_to
+`book_review`: B-tree по user, accomodation, review_stats
 
 ### Шардинг.
 
