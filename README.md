@@ -10,6 +10,7 @@
 8. [Технологии.](#8)
 9. [Обеспечение надёжности.](#9)
 10. [Схема проекта.](#10)
+11. [Список серверов.](#11)
 ---
 
 ## 1. Тема и целевая аудитория. <a name="1"></a>
@@ -695,3 +696,6 @@ review_stats:
 | Accomodation service             |  Таблицы `accomodation`, `accomodation_stats`, `category` и `accomodation_type` в PostgreSQL.                     |
 | Search service            | Из таблицы `category`: `name`, `description` в Elasticsearch. <br> Из таблицы `accommodation`: `title`, `description`, `price_min` в Elasticsearch. <br> Из таблицы `accommodation_stats`: `rating`, `accommodation_type`, `name`, `description` в Elasticsearch. |
 
+---
+
+### 11. Список серверов. <a name="11"></a>
