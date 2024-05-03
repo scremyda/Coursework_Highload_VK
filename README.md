@@ -630,9 +630,17 @@ review_stats:
 
 ### Репликация.
 
-Будем использовать схему репликации Master-Slave. Применим данную схему на user, accomodation и accomodation_type т.к. запросов на чтение из этих таблиц гораздо больше, чем на запись. 
+Будем использовать схему репликации Master-Slave с двумя Slave'ами. 
+Для таблиц review_stats, accomodation_stats, user, book_review применим схему с одним асинхронным Slave'ом, т.к. нам не критична маленькая задержка и в случае падения Master не асинхронный Slave встанет на его место. 
 
-### Клиентские библиотеки / интеграции.
+![Async](https://github.com/scremyda/Coursework_Highload_VK/assets/63557586/3d31d532-e98b-4052-8c95-d8063b3b5c76)
+
+Для таблиц accomodation, accomodation_type, category применим схему без асинхронности, т.к. нам важна актуальность данных и их чтение.
+
+![Sync](https://github.com/scremyda/Coursework_Highload_VK/assets/63557586/77dde51d-a361-47ca-bed2-228e0e5b516b)
+
+
+### Клиентские библиотеки/интеграции.
 
 Языком backend является **GO** и подходящие для него библиотеки:
 
