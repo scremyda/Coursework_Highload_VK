@@ -692,7 +692,8 @@ review_stats:
 |-------------------|:-----------------------------------------------------:|
 | User service      |                       Таблица `user` в PostgreSQL.                         |
 | Auth service        |                       Сессии(`user_id`, `value`, `session_id`) в Redis.                       |
-| Book/Review service             |                       Таблицы `book_review` и `review_stats` в PostgreSQL.                        |
+| Review service             |                       Таблицы `book_review` и `review_stats` в PostgreSQL.                        |
+| Book service             |                       Таблица `book_review` в PostgreSQL.                        |
 | Accomodation service             |  Таблицы `accomodation`, `accomodation_stats`, `category` и `accomodation_type` в PostgreSQL.                     |
 | Search service            | Из таблицы `category`: `name`, `description` в Elasticsearch. <br> Из таблицы `accommodation`: `title`, `description`, `price_min` в Elasticsearch. <br> Из таблицы `accommodation_stats`: `rating`, `accommodation_type`, `name`, `description` в Elasticsearch. |
 
