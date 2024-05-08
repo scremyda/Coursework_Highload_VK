@@ -638,8 +638,7 @@ review_stats:
 
 Для таблиц accomodation, book_review, accomodation_type применим схему с тремя синхронным Slave'ами, считаем что запрос на запись прошел успешно после ответа от 2 Slave'ов. Данные таблицы принимают большое количество запросов на чтение и являются основополагающими всего продукта.
 
-![Sync 3](https://github.com/scremyda/Coursework_Highload_VK/assets/63557586/0e63d7cb-ab40-486c-8773-8ef50f5f0848)
-
+![Sync 3)](https://github.com/scremyda/Coursework_Highload_VK/assets/63557586/cc7dcec9-c4ce-4b23-8449-683c3cfa24a9)
 
 ### Клиентские библиотеки/интеграции.
 
