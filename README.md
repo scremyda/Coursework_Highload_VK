@@ -619,11 +619,11 @@ review_stats:
 
 ### Индексы.
 
-`accomodation`: B-tree по user, accomodation_stats.
-
-`accomodation_type`: B-tree по accomodation.
-
-`book_review`: B-tree по user, accomodation, review_stats.
+| Таблица        |          Тип индекса         |              Поле              |
+|-------------------|:----------------------------------:|:--------------------------------------------:|
+| `accomodation`            |                        B-tree                         | `user, accomodation_stats`  |
+| `accomodation_type`            |                        B-tree                         | `accomodation`  |
+| `book_review`            |                        B-tree                         | `user, accomodation, review_stats`  |
 
 ### Шардинг.
 
