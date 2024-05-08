@@ -631,14 +631,14 @@ review_stats:
 
 ### Репликация.
 
-Будем использовать схему репликации Master-Slave с двумя Slave'ами. 
-Для таблиц review_stats, accomodation_stats, user, book_review применим схему с одним асинхронным Slave'ом, т.к. нам не критична маленькая задержка и в случае падения Master не асинхронный Slave встанет на его место. 
+Будем использовать схему репликации Master-Slave с синхронным Slave'ами. 
+Для таблиц review_stats, accomodation_stats, user, category применим схему с двумя синхронным Slave'ами, считаем что запрос на запись прошел успешно после ответа от 1 Slave'а. 
 
-![Async](https://github.com/scremyda/Coursework_Highload_VK/assets/63557586/ebb12e64-05fe-49b4-ab05-e15b195d92b0)
+![Sync 2](https://github.com/scremyda/Coursework_Highload_VK/assets/63557586/4fbf7545-38eb-4398-bf57-8f936092aff8)
 
-Для таблиц accomodation, accomodation_type, category применим схему без асинхронности, т.к. нам важна актуальность данных и их чтение.
+Для таблиц accomodation, book_review, accomodation_type применим схему с тремя синхронным Slave'ами, считаем что запрос на запись прошел успешно после ответа от 2 Slave'ов. Данные таблицы принимают большое количество запросов на чтение и являются основополагающими всего продукта.
 
-![Sync](https://github.com/scremyda/Coursework_Highload_VK/assets/63557586/4fbf7545-38eb-4398-bf57-8f936092aff8)
+![Sync 3](https://github.com/scremyda/Coursework_Highload_VK/assets/63557586/0e63d7cb-ab40-486c-8773-8ef50f5f0848)
 
 
 ### Клиентские библиотеки/интеграции.
