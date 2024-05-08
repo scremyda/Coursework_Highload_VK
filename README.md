@@ -796,9 +796,9 @@ review_stats:
 
 | Сервис    | Хостинг | Конфигурация                         |  Покупка | Аренда/Амортизация |
 | --------- | ------- | ------------------------------------ | -------- | -------------------- |
-| kube node | own     | 2x/2U/8xAMD EPYC 7513/16x128GB/1xNVMe256GB/2x25Gb/s | $21 000 | $500 |
-| Redis     | own     | 2U/8xAMD EPYC 7443P/32x256GB/1xNVMe8T/1x10Gb/s   | $19 000 | $450 |
-| PostgreSQL  | own   | 2U/8xAMD EPYC 7443P/16x128GB/1xNVMe8T/1x25Gb/s    |  $19 000 | $450 |
+| kube node | own     | 2x/2U/8xAMD EPYC 7513/16x128GB/1xNVMe256GB/2x25Gb/s | $21 000 | $2500 |
+| Redis     | own     | 2U/8xAMD EPYC 7443P/32x256GB/1xNVMe8T/1x10Gb/s   | $19 000 | $2250 |
+| PostgreSQL  | own   | 2U/8xAMD EPYC 7443P/16x128GB/1xNVMe8T/1x25Gb/s    |  $19 000 | $2250 |
 
 ### Европа.
 
@@ -824,9 +824,9 @@ review_stats:
 
 | Сервис    | Хостинг | Конфигурация                         | Покупка | Аренда/Амортизация |
 | --------- | ------- | ------------------------------------ |  -------- | -------------------- |
-| kube node | own     | 2x/2U/8xAMD EPYC 7513/16x128GB/1xNVMe256GB/2x25Gb/s | $21 000 | $500 |
-| Redis     | own     | 2U/8xAMD EPYC 7443P/32x256GB/1xNVMe8T/1x10Gb/s   | $19 000 | $450 |
-| PostgreSQL  | own   | 2U/8xAMD EPYC 7443P/16x128GB/1xNVMe8T/1x25Gb/s    | $19 000 | $450 |
+| kube node | own     | 2x/2U/8xAMD EPYC 7513/16x128GB/1xNVMe256GB/2x25Gb/s | $21 000 | $2500 |
+| Redis     | own     | 2U/8xAMD EPYC 7443P/32x256GB/1xNVMe8T/1x10Gb/s   | $19 000 | $2250 |
+| PostgreSQL  | own   | 2U/8xAMD EPYC 7443P/16x128GB/1xNVMe8T/1x25Gb/s    | $19 000 | $2250 |
 
 ### Азия (влючая Австралию).
 
@@ -852,9 +852,9 @@ review_stats:
 
 | Сервис    | Хостинг | Конфигурация                         | Покупка | Аренда/Амортизация |
 | --------- | ------- | ------------------------------------ |  -------- | -------------------- |
-| kube node | own     | 2x/2U/8xAMD EPYC 7513/16x128GB/1xNVMe256GB/2x25Gb/s | $21 000 | $500 |
-| Redis     | own     | 2U/8xAMD EPYC 7443P/32x256GB/1xNVMe8T/1x10Gb/s   | $19 000 | $450 |
-| PostgreSQL  | own   | 2U/8xAMD EPYC 7443P/16x128GB/1xNVMe8T/1x25Gb/s    |  $19 000 | $450 |
+| kube node | own     | 2x/2U/8xAMD EPYC 7513/16x128GB/1xNVMe256GB/2x25Gb/s | $21 000 | $2500 |
+| Redis     | own     | 2U/8xAMD EPYC 7443P/32x256GB/1xNVMe8T/1x10Gb/s   | $19 000 | $2250 |
+| PostgreSQL  | own   | 2U/8xAMD EPYC 7443P/16x128GB/1xNVMe8T/1x25Gb/s    |  $19 000 | $2250 |
 
 ### Африка.
 
@@ -880,6 +880,6 @@ review_stats:
 
 | Сервис    | Хостинг | Конфигурация                         | Покупка | Аренда/Амортизация |
 | --------- | ------- | ------------------------------------ | -------- | -------------------- |
-| kube node | own     | 1U/8xAMD EPYC 7313/8x64GB/1xNVMe128GB/2x25Gb/s | $14 000 | $350 |
-| Redis     | own     | 2U/8xAMD EPYC 7513P/16x256GB/1xNVMe4T/1x10Gb/s   | $17 000 | $400 |
-| PostgreSQL  | own   | 2U/8xAMD EPYC 7513P/8x128GB/1xNVMe4T/1x25Gb/s    |  $17 000 | $400 |
+| kube node | own     | 1U/8xAMD EPYC 7313/8x64GB/1xNVMe128GB/2x25Gb/s | $14 000 | $1750 |
+| Redis     | own     | 2U/8xAMD EPYC 7513P/16x256GB/1xNVMe4T/1x10Gb/s   | $17 000 | $2000 |
+| PostgreSQL  | own   | 2U/8xAMD EPYC 7513P/8x128GB/1xNVMe4T/1x25Gb/s    |  $17 000 | $2000 |
