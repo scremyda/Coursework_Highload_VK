@@ -717,9 +717,8 @@ review_stats:
 
 ## 10. Схема проекта. <a name="10"></a>
 
-![Схема Booking](https://github.com/scremyda/Coursework_Highload_VK/assets/63557586/0dcfb170-6947-4e1f-be9a-d2139d8250cc)
+![Схема Booking](https://github.com/scremyda/Coursework_Highload_VK/assets/63557586/071f634c-c2d0-472d-adad-445515ca9db8)
 
-Для сервисов Book, Review, Accomodation
 
 | Сервис            |          Используемая таблица/хранилище             | 
 |-------------------|:-----------------------------------------------------:|
