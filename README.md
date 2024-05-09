@@ -887,6 +887,6 @@ review_stats:
 
 | Сервис    | Хостинг | Конфигурация                         | Покупка | Аренда/Амортизация |
 | --------- | ------- | ------------------------------------ | -------- | -------------------- |
-| kube node | own     | 1U/8xAMD EPYC 7513P/8x64GB/1xNVMe128GB/2x25Gb/s | $14 000 | $1750 |
-| Redis     | own     | 1U/8xAMD EPYC 7513P/16x256GB/1xNVMe4T/1x10Gb/s   | $17 000 | $2000 |
-| PostgreSQL  | own   | 2U/8xAMD EPYC 7513P/8x128GB/1xNVMe4T/1x25Gb/s    |  $17 000 | $2000 |
+| kube node | own     | 2U/8xAMD EPYC 7513/8x64GB/1xNVMe128GB/2x25Gb/s | $17 000 | $2000 |
+| Redis     | own     | 1U/8xAMD EPYC 7513/16x256GB/1xNVMe4T/1x10Gb/s   | $17 000 | $2000 |
+| PostgreSQL  | own   | 2U/8xAMD EPYC 7513/8x128GB/1xNVMe4T/1x25Gb/s    |  $17 000 | $2000 |
